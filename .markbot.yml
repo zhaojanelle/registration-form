@@ -1,0 +1,93 @@
+repo: 'registration-form'
+canvasCourse: 'web-dev-1'
+
+naming: true
+restrictFileTypes: true
+liveWebsite: true
+
+git:
+  numCommits: 2
+  allCommitted: true
+  allSynced: true
+
+html:
+  - path: 'index.html'
+    valid: true
+    bestPractices: true
+    outline: true
+    has:
+      - ['link[href*="Open+Sans:400,400i"]', 'The Google Font, `Open Sans` (regular, italic) is missing']
+      - ['link[href*="modules.css"] + link[href*="grid.css"]', 'The `modules.css` file must come before the `grid.css` file']
+      - ['link[href*="grid.css"] + link[href*="type.css"]', 'The `grid.css` file must come before the `type.css` file']
+      - ['link[href*="type.css"] + link[href*="main.css"]', 'The `type.css` file must come before the `main.css` file']
+      - ['form[method="POST"][action*="formspree.io"]', 'The `<form>` should submit to @@https://formspree.io/@@']
+      - 'fieldset'
+      - 'legend'
+      - 'label[for]'
+      - 'input[id][name]'
+      - 'button[type="submit"]'
+      - 'select[id][name]'
+      - 'select > option'
+      - ['select > option:nth-child(4)', 'There should be 4 `<option>` tags']
+      - 'textarea[id][name]'
+      - 'input[type="hidden"]'
+    has_not:
+      - 'hr'
+    search:
+      - 'Want to go to Mars?'
+      - 'We’re looking for super-awesome human beings who want to make the long trek to Mars for the adventure of a lifetime.'
+      - 'Personal details'
+      - 'Name'
+      - 'Age'
+      - 'Email'
+      - 'Physical fitness'
+      - 'Super-human'
+      - 'Fit as a fiddle'
+      - 'Not terribly strong'
+      - 'A little couch-potato-y'
+      - 'Address'
+      - 'Mission statement'
+      - 'Why do you want to go to Mars?'
+      - 'Register for the trip!'
+      - 'Request to join the mission'
+
+css:
+  - path: 'css/main.css'
+    valid: true
+    bestPractices: true
+    has:
+      - ['html', 'font-family', '"Open Sans", sans-serif']
+    search:
+      - '#000'
+      - '#fff'
+      - '#f2f2f2'
+      - '\@media only screen and \(min-width\: 60em\)'
+      - 'padding'
+      - 'border'
+    search_not:
+      - 'text-align'
+      - 'margin'
+      - 'font-size'
+      - 'font-style'
+      - 'font-weight'
+      - 'max-width'
+  - path: 'css/grid.css'
+    valid: true
+    bestPractices: true
+    search:
+      - ['https://gridifier.web-dev.tools/#xs,4,0,0,0;s,4,25,0,0;m,4,38,1,1;l,4,60,1,1', 'The `grid.css` should be generated with Gridifier’s default settings']
+  - path: 'css/type.css'
+    valid: true
+    bestPractices: true
+    search:
+      - ['https://typografier.web-dev.tools/#0,100,1.3,1.067,0;38,110,1.4,1.125,1;60,120,1.5,1.125,1;90,130,1.5,1.125,1', 'The `type.css` should be generated with Typografier’s default settings']
+  - path: 'css/modules.css'
+    valid: true
+    bestPractices: true
+    search:
+      - ['https://modulifier.web-dev.tools/#responsive;images;list-group;embed;media-object;icons;hidden;positioning;nice-lists;buttons;forms;accessibility;print', 'Select all the different modules when adding Modulifier.']
+      - ''
+
+screenshots:
+  - path: 'index.html'
+    sizes: [320, 400, 608, 960, 1440]
