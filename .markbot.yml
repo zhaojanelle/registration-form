@@ -31,6 +31,7 @@ html:
       - ['select > option:nth-child(4)', 'There should be 4 `<option>` tags']
       - 'textarea[id][name]'
       - 'input[type="hidden"]'
+      - '.grid > .unit'
     has_not:
       - 'hr'
     search:
@@ -50,6 +51,12 @@ html:
       - 'Why do you want to go to Mars?'
       - 'Register for the trip!'
       - 'Request to join the mission'
+      - 'xs-'
+      - 's-'
+      - 'm-'
+      - 'l-'
+      - 'push'
+      - 'pad-'
 
 css:
   - path: 'css/main.css'
