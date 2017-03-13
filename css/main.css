@@ -14,12 +14,16 @@ body {
   border-bottom: 1px solid #000;
 }
 
-.left-form {
-  padding-right: .5rem;
-}
+@media only screen and (min-width: 60em) {
 
-.right-form {
-  padding-left: .5rem;
+  .left-form {
+    padding-right: .5rem;
+  }
+
+  .right-form {
+    padding-left: .5rem;
+  }
+
 }
 
 legend {
